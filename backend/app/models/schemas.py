@@ -3,8 +3,17 @@ from typing import Optional
 import re
 
 
+class TranscriptSegment(BaseModel):
+    text: str
+    start: float
+    duration: float = 0.0
+
+
 class LoadVideoRequest(BaseModel):
     url: str = Field(..., description="YouTube video URL")
+    transcript: Optional[list[TranscriptSegment]] = Field(
+        None, description="Client-provided transcript segments (fallback if server can't fetch)"
+    )
 
     @field_validator("url")
     @classmethod

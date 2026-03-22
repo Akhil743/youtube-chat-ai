@@ -1,13 +1,15 @@
+import logging
 from fastapi import APIRouter, HTTPException, Request
 
 from app.models.schemas import (
     LoadVideoRequest, LoadVideoResponse,
     ChatRequest, ChatResponse, TimestampRef,
 )
-from app.services.transcript import extract_video_id, fetch_transcript
+from app.services.transcript import extract_video_id, fetch_transcript, build_transcript_from_raw
 from app.services.rag import rag_service
 from app.limiter import limiter
 
+log = logging.getLogger(__name__)
 router = APIRouter(prefix="/api", tags=["chat"])
 
 
@@ -26,12 +28,28 @@ async def load_video(request: Request, body: LoadVideoRequest):
             message="Video already loaded and ready for questions.",
         )
 
+    transcript = None
+
+    # try server-side fetch first
     try:
         transcript = fetch_transcript(video_id)
-    except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e))
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to fetch transcript: {e}")
+        log.warning(f"Server-side transcript fetch failed: {e}")
+
+    # fall back to client-provided transcript
+    if transcript is None and body.transcript:
+        try:
+            segments = [s.model_dump() for s in body.transcript]
+            transcript = build_transcript_from_raw(video_id, segments)
+        except Exception as e:
+            log.warning(f"Client transcript parsing failed: {e}")
+
+    if transcript is None:
+        raise HTTPException(
+            status_code=404,
+            detail=f"TRANSCRIPT_UNAVAILABLE:Could not fetch transcript for this video. "
+                   f"The server may be blocked by YouTube.",
+        )
 
     try:
         store = await rag_service.ingest_transcript(transcript)

@@ -1,0 +1,4 @@
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.google.android.gms.** { *; }
+-keep class androidx.webkit.** { *; }

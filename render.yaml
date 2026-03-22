@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: youtube-chatbot-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://akhilrajs.com,chrome-extension://
+      - key: MAX_VIDEOS_CACHED
+        value: "50"
+    healthCheckPath: /health

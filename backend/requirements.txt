@@ -1,8 +1,6 @@
 fastapi
 uvicorn[standard]
 langchain
-langchain-core
-langchain-text-splitters
 langchain-google-genai
 langchain-community
 google-generativeai

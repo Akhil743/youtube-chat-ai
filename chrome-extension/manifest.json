@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Chat AI",
+  "version": "1.0.0",
+  "description": "Ask AI-powered questions about any YouTube video. Get answers with clickable timestamps.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "css": ["sidebar.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

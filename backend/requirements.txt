@@ -11,3 +11,4 @@ faiss-cpu==1.13.0
 python-dotenv==1.2.1
 pydantic==2.12.5
 slowapi==0.1.9
+requests==2.32.5

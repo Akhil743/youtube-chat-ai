@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field, field_validator
-from typing import Optional
+from typing import Any, Optional
 import re
 
 
@@ -36,6 +36,7 @@ class LoadVideoResponse(BaseModel):
     language: str
     chunk_count: int
     message: str
+    quota: Optional[dict[str, Any]] = None
 
 
 class ChatRequest(BaseModel):
@@ -53,6 +54,7 @@ class ChatResponse(BaseModel):
     answer: str
     sources: list[TimestampRef] = Field(default_factory=list)
     video_id: str
+    quota: Optional[dict[str, Any]] = None
 
 
 class HealthResponse(BaseModel):

@@ -9,7 +9,7 @@ from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 
 from app.limiter import limiter
-from app.routers import chat
+from app.routers import chat, billing
 from app.services.rag import rag_service
 from app.models.schemas import HealthResponse
 
@@ -22,20 +22,34 @@ app = FastAPI(
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
-origins = os.getenv(
+_raw_origins = os.getenv(
     "ALLOWED_ORIGINS",
     "https://akhilrajs.com,http://localhost:8080,http://127.0.0.1:8080",
 ).split(",")
 
+origins = []
+for o in _raw_origins:
+    o = o.strip()
+    if o:
+        origins.append(o)
+
+origins_regex = None
+chrome_prefixes = [o for o in origins if o.startswith("chrome-extension://")]
+if chrome_prefixes:
+    origins = [o for o in origins if not o.startswith("chrome-extension://")]
+    origins_regex = r"^chrome-extension://.*$"
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=origins_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 app.include_router(chat.router)
+app.include_router(billing.router)
 
 
 @app.get("/", response_model=HealthResponse)

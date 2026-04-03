@@ -1,4 +1,5 @@
 import logging
+from typing import Optional
 from fastapi import APIRouter, HTTPException, Request
 
 from app.models.schemas import (
@@ -7,15 +8,22 @@ from app.models.schemas import (
 )
 from app.services.transcript import extract_video_id, fetch_transcript, build_transcript_from_raw
 from app.services.rag import rag_service
+from app.services.quota import quota_service
 from app.limiter import limiter
 
 log = logging.getLogger(__name__)
 router = APIRouter(prefix="/api", tags=["chat"])
 
 
+def _get_user_id(request: Request) -> Optional[str]:
+    return request.headers.get("X-User-ID")
+
+
 @router.post("/load-video", response_model=LoadVideoResponse)
 @limiter.limit("10/minute")
 async def load_video(request: Request, body: LoadVideoRequest):
+    user_id = _get_user_id(request)
+
     try:
         video_id = extract_video_id(body.url)
     except ValueError as e:
@@ -26,6 +34,14 @@ async def load_video(request: Request, body: LoadVideoRequest):
             video_id=video_id, title=store.title,
             language=store.language, chunk_count=store.chunk_count,
             message="Video already loaded and ready for questions.",
+            quota=quota_service.get_quota_info(user_id),
+        )
+
+    quota = quota_service.check_load_quota(user_id)
+    if not quota["allowed"]:
+        raise HTTPException(
+            status_code=429,
+            detail=f"Daily video load limit reached ({quota['limit']}). Upgrade to Pro for unlimited access.",
         )
 
     transcript = None
@@ -56,16 +72,28 @@ async def load_video(request: Request, body: LoadVideoRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to process transcript: {e}")
 
+    quota_service.record_load(user_id)
+
     return LoadVideoResponse(
         video_id=video_id, title=store.title,
         language=store.language, chunk_count=store.chunk_count,
         message="Video loaded successfully. Ask your questions!",
+        quota=quota_service.get_quota_info(user_id),
     )
 
 
 @router.post("/chat", response_model=ChatResponse)
 @limiter.limit("30/minute")
 async def chat(request: Request, body: ChatRequest):
+    user_id = _get_user_id(request)
+
+    quota = quota_service.check_chat_quota(user_id)
+    if not quota["allowed"]:
+        raise HTTPException(
+            status_code=429,
+            detail=f"Daily message limit reached ({quota['limit']}). Upgrade to Pro for unlimited access.",
+        )
+
     if not rag_service.is_video_loaded(body.video_id):
         raise HTTPException(status_code=404, detail="Video not loaded. Please load the video first.")
 
@@ -78,8 +106,11 @@ async def chat(request: Request, body: ChatRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate answer: {e}")
 
+    quota_service.record_chat(user_id)
+
     return ChatResponse(
         answer=answer,
         sources=[TimestampRef(text=s["text"], start_seconds=s["start_seconds"]) for s in sources],
         video_id=body.video_id,
+        quota=quota_service.get_quota_info(user_id),
     )

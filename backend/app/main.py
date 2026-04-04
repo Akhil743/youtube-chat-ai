@@ -52,7 +52,7 @@ app.include_router(chat.router)
 app.include_router(billing.router)
 
 
-@app.get("/", response_model=HealthResponse)
-@app.get("/health", response_model=HealthResponse)
+@app.api_route("/", methods=["GET", "HEAD"], response_model=HealthResponse)
+@app.api_route("/health", methods=["GET", "HEAD"], response_model=HealthResponse)
 async def health():
     return HealthResponse(status="healthy", videos_cached=len(rag_service._cache))

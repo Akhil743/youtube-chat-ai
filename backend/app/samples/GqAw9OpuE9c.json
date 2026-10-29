@@ -1,0 +1,173 @@
+{
+ "video_id": "GqAw9OpuE9c",
+ "title": "What is a neural network? A computer scientist explains.",
+ "channel": "The Conversation",
+ "url": "https://www.youtube.com/watch?v=GqAw9OpuE9c",
+ "duration_seconds": 150,
+ "license": "Creative Commons Attribution license (reuse allowed), as shown on the YouTube watch page",
+ "license_verified_on": "2026-10-29",
+ "captions": "Manually created English captions published on YouTube",
+ "language": "en",
+ "segments": [
+  {
+   "text": "So a neural network is a network of artificial neurons.",
+   "start": 6.94,
+   "duration": 3.303
+  },
+  {
+   "text": "It tries to simulate the human brain, and",
+   "start": 10.243,
+   "duration": 2.87
+  },
+  {
+   "text": "and the neural network has many layers of neurons.",
+   "start": 13.113,
+   "duration": 3.403
+  },
+  {
+   "text": "And the first layer will receive the input like image, video, sound, text or anything,",
+   "start": 16.516,
+   "duration": 6.039
+  },
+  {
+   "text": "then the input data will go through all network layers,",
+   "start": 22.555,
+   "duration": 2.903
+  },
+  {
+   "text": "and the output of one layer will be fed into the next layer.",
+   "start": 25.458,
+   "duration": 4.371
+  },
+  {
+   "text": "So there are many millions, there are millions of parameters in neural networks.",
+   "start": 29.829,
+   "duration": 5.206
+  },
+  {
+   "text": "And neural networks can be used to recognize things.",
+   "start": 35.035,
+   "duration": 2.836
+  },
+  {
+   "text": "For example, like networks can be used to recognize that there is a dog",
+   "start": 37.871,
+   "duration": 4.204
+  },
+  {
+   "text": "or there is a cat in the image.",
+   "start": 42.075,
+   "duration": 3.57
+  },
+  {
+   "text": "And so there is a need to have big data in training neural networks.",
+   "start": 45.645,
+   "duration": 4.872
+  },
+  {
+   "text": "Just like humans, just like us, actually, humans take advantage of big data.",
+   "start": 50.517,
+   "duration": 4.971
+  },
+  {
+   "text": "Imagine a person perceive like 30 frames, 30 images per second,",
+   "start": 55.488,
+   "duration": 4.805
+  },
+  {
+   "text": "that means 1800 images per minute, and over 600 million images per year.",
+   "start": 60.293,
+   "duration": 6.607
+  },
+  {
+   "text": "So that's why we should give neural networks a similar opportunity",
+   "start": 66.9,
+   "duration": 3.937
+  },
+  {
+   "text": "to have the big data for training.",
+   "start": 70.837,
+   "duration": 3.036
+  },
+  {
+   "text": "Yeah, so there are many, many applications of neural networks",
+   "start": 73.873,
+   "duration": 2.536
+  },
+  {
+   "text": "like facial recognition and driverless cars.",
+   "start": 76.409,
+   "duration": 3.771
+  },
+  {
+   "text": "So for example, like the faces detected by the smartphone's camera",
+   "start": 80.18,
+   "duration": 5.171
+  },
+  {
+   "text": "will be recognized by the neural network.",
+   "start": 85.351,
+   "duration": 2.436
+  },
+  {
+   "text": "Or in another application, the driverless car is equipped with all the",
+   "start": 87.787,
+   "duration": 5.472
+  },
+  {
+   "text": "multiple cameras which try to recognize the surrounding environment.",
+   "start": 93.259,
+   "duration": 4.071
+  },
+  {
+   "text": "So the autonomous cars are able to recognize other vehicles,",
+   "start": 97.33,
+   "duration": 3.737
+  },
+  {
+   "text": "recognize traffic sign, stop sign, and from the recognition the car",
+   "start": 101.067,
+   "duration": 4.838
+  },
+  {
+   "text": "can change the speed automatically, even does the brake",
+   "start": 105.905,
+   "duration": 4.572
+  },
+  {
+   "text": "to avoid any potential accidents.",
+   "start": 110.477,
+   "duration": 2.535
+  },
+  {
+   "text": "So neural networks were invented long time ago.",
+   "start": 113.012,
+   "duration": 2.97
+  },
+  {
+   "text": "Then it went through the long long hibernation due to all the",
+   "start": 115.982,
+   "duration": 3.971
+  },
+  {
+   "text": "lightweight models because of the computational costs.",
+   "start": 119.953,
+   "duration": 4.738
+  },
+  {
+   "text": "So recently, it's grows again, thanks to advanced computational",
+   "start": 124.691,
+   "duration": 3.97
+  },
+  {
+   "text": "resources like graphical processing unit, it's called GPU.",
+   "start": 128.661,
+   "duration": 4.071
+  },
+  {
+   "text": "So that's why now we see the prospering of neural networks.",
+   "start": 132.732,
+   "duration": 3.404
+  }
+ ]
+}

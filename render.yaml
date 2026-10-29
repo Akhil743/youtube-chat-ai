@@ -5,12 +5,16 @@ services:
     plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    # --proxy-headers/--forwarded-allow-ips: trust Render's proxy so request.client
+    # reflects X-Forwarded-For (the limiter prefers CF-Connecting-IP anyway).
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips '*'
+    healthCheckPath: /health
     envVars:
       - key: GOOGLE_API_KEY
         sync: false
       - key: ALLOWED_ORIGINS
-        value: https://akhilrajs.com,chrome-extension://
+        value: https://akhilrajs.com
       - key: MAX_VIDEOS_CACHED
         value: "50"
-    healthCheckPath: /health
+      - key: DAILY_LLM_CAP
+        value: "500"

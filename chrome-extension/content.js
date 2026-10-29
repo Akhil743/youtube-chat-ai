@@ -6,6 +6,12 @@
     let chatHistory = [];
     let sidebarVisible = false;
 
+    function escapeHtml(text) {
+        const div = document.createElement("div");
+        div.textContent = String(text);
+        return div.innerHTML;
+    }
+
     function getVideoId() {
         const params = new URLSearchParams(window.location.search);
         return params.get("v");
@@ -130,7 +136,7 @@
             chatHistory = [];
 
             statusEl.innerHTML = `
-                <span class="ytchat-status-text ytchat-success">${data.chunk_count} chunks indexed &middot; ${data.language}</span>
+                <span class="ytchat-status-text ytchat-success">${escapeHtml(data.chunk_count)} chunks indexed &middot; ${escapeHtml(data.language)}</span>
             `;
 
             document.getElementById("ytchat-question").disabled = false;
@@ -141,7 +147,7 @@
             addExtMessage("assistant", `Video loaded! Ask me anything about it.`);
         } catch (err) {
             statusEl.innerHTML = `
-                <span class="ytchat-status-text ytchat-error">${err.message}</span>
+                <span class="ytchat-status-text ytchat-error">${escapeHtml(err.message)}</span>
                 <button class="ytchat-load-btn" id="ytchat-load" onclick="this.parentElement.querySelector('.ytchat-load-btn')">Retry</button>
             `;
             document.getElementById("ytchat-load").addEventListener("click", loadVideo);
@@ -203,7 +209,7 @@
         bubble.className = "ytchat-bubble";
 
         if (role === "assistant") {
-            bubble.innerHTML = content
+            bubble.innerHTML = escapeHtml(content)
                 .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
                 .replace(/\n/g, "<br>")
                 .replace(/\[(\d{1,2}:)?(\d{1,2}:\d{2})\]/g, (match, h, ms) => {

@@ -1,62 +1,99 @@
+from typing import Literal, Optional
+
 from pydantic import BaseModel, Field, field_validator
-from typing import Any, Optional
-import re
 
+from app.services.transcript import extract_video_id
 
-class TranscriptSegment(BaseModel):
-    text: str
-    start: float
-    duration: float = 0.0
+VIDEO_ID_PATTERN = r"^[A-Za-z0-9_-]{11}$"
 
 
 class LoadVideoRequest(BaseModel):
-    url: str = Field(..., description="YouTube video URL")
-    transcript: Optional[list[TranscriptSegment]] = Field(
-        None, description="Client-provided transcript segments (fallback if server can't fetch)"
-    )
+    url: str = Field(..., min_length=11, max_length=300, description="YouTube video URL or ID")
 
     @field_validator("url")
     @classmethod
     def validate_youtube_url(cls, v: str) -> str:
-        patterns = [
-            r"(?:https?://)?(?:www\.)?youtube\.com/watch\?v=[\w-]+",
-            r"(?:https?://)?youtu\.be/[\w-]+",
-            r"(?:https?://)?(?:www\.)?youtube\.com/embed/[\w-]+",
-            r"(?:https?://)?(?:www\.)?youtube\.com/shorts/[\w-]+",
-        ]
-        if not any(re.match(p, v) for p in patterns):
-            raise ValueError("Invalid YouTube URL")
-        return v
+        extract_video_id(v)  # raises ValueError -> 422
+        return v.strip()
+
+
+class IngestUsage(BaseModel):
+    model: str
+    embedding_tokens: int
+    tokens_estimated: bool = True
+    cost_usd: Optional[float] = None
+    latency_ms: int
 
 
 class LoadVideoResponse(BaseModel):
     video_id: str
     title: str
+    channel: Optional[str] = None
     duration_seconds: Optional[int] = None
     language: str
     chunk_count: int
+    is_sample: bool = False
+    already_loaded: bool = False
     message: str
-    quota: Optional[dict[str, Any]] = None
+    usage: IngestUsage
+
+
+class ChatTurn(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str = Field(..., max_length=4000)
 
 
 class ChatRequest(BaseModel):
-    video_id: str
+    video_id: str = Field(..., pattern=VIDEO_ID_PATTERN)
     question: str = Field(..., min_length=1, max_length=1000)
-    chat_history: list[dict] = Field(default_factory=list)
+    chat_history: list[ChatTurn] = Field(default_factory=list, max_length=20)
+
+    @field_validator("question")
+    @classmethod
+    def strip_question(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("Question is empty")
+        return v
 
 
-class TimestampRef(BaseModel):
-    text: str
+class Source(BaseModel):
     start_seconds: float
+    end_seconds: float
+    label: str
+    snippet: str
+    cited: bool
+    rank: int
+
+
+class CitationCheckOut(BaseModel):
+    cited: int = Field(description="Timestamps the model cited")
+    valid: int = Field(description="Cited timestamps inside a retrieved chunk")
+    removed: list[str] = Field(default_factory=list, description="Citations dropped from the answer")
+
+
+class ChatUsage(BaseModel):
+    model: str
+    input_tokens: int
+    output_tokens: int
+    embedding_model: str
+    embedding_tokens: int
+    cost_usd: Optional[float] = None
+    latency_ms: int
+    pricing_as_of: str
+    usage_reported: bool = True
 
 
 class ChatResponse(BaseModel):
     answer: str
-    sources: list[TimestampRef] = Field(default_factory=list)
+    refused: bool = False
+    sources: list[Source] = Field(default_factory=list)
+    citation_check: CitationCheckOut
+    usage: ChatUsage
     video_id: str
-    quota: Optional[dict[str, Any]] = None
 
 
 class HealthResponse(BaseModel):
     status: str
     videos_cached: int
+    samples_ready: bool

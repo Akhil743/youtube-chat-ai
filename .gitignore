@@ -11,3 +11,4 @@ build/
 *.pkl
 .DS_Store
 node_modules/
+.pytest_cache/

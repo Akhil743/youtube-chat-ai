@@ -1,0 +1,653 @@
+{
+ "video_id": "0eKVizvYSUQ",
+ "title": "How Google Search Works (in 5 minutes)",
+ "channel": "Google",
+ "url": "https://www.youtube.com/watch?v=0eKVizvYSUQ",
+ "duration_seconds": 315,
+ "license": "Creative Commons Attribution license (reuse allowed), as shown on the YouTube watch page",
+ "license_verified_on": "2026-10-29",
+ "captions": "Manually created English captions published on YouTube",
+ "language": "en",
+ "segments": [
+  {
+   "text": "SPEAKER: Every day, billions of people come here with questions",
+   "start": 4.07,
+   "duration": 3.37
+  },
+  {
+   "text": "about all kinds of things.",
+   "start": 7.44,
+   "duration": 1.93
+  },
+  {
+   "text": "Sometimes we even get questions about Google Search itself,",
+   "start": 9.37,
+   "duration": 3.77
+  },
+  {
+   "text": "like how this whole thing actually works.",
+   "start": 13.14,
+   "duration": 2.85
+  },
+  {
+   "text": "And while this is a subject entire books have been written",
+   "start": 15.99,
+   "duration": 2.67
+  },
+  {
+   "text": "about, there is a good chance you're",
+   "start": 18.66,
+   "duration": 1.77
+  },
+  {
+   "text": "in the market for something a little more concise.",
+   "start": 20.43,
+   "duration": 2.86
+  },
+  {
+   "text": "So let's say it's getting close to dinner",
+   "start": 23.29,
+   "duration": 2.09
+  },
+  {
+   "text": "and you want a recipe for lasagna.",
+   "start": 25.38,
+   "duration": 1.74
+  },
+  {
+   "text": "You've probably seen this before.",
+   "start": 29.95,
+   "duration": 2.26
+  },
+  {
+   "text": "But let's go a little deeper.",
+   "start": 32.21,
+   "duration": 2.06
+  },
+  {
+   "text": "Since the beginning, back when the home page looked like this,",
+   "start": 34.27,
+   "duration": 3.57
+  },
+  {
+   "text": "Google has been continuously mapping",
+   "start": 37.84,
+   "duration": 1.89
+  },
+  {
+   "text": "the web, hundreds of billions of pages,",
+   "start": 39.73,
+   "duration": 2.58
+  },
+  {
+   "text": "to create something called an index.",
+   "start": 42.31,
+   "duration": 2.34
+  },
+  {
+   "text": "Think of it as the giant library we",
+   "start": 44.65,
+   "duration": 1.83
+  },
+  {
+   "text": "look through whenever you do a search for lasagna or anything",
+   "start": 46.48,
+   "duration": 3.45
+  },
+  {
+   "text": "else.",
+   "start": 49.93,
+   "duration": 1.03
+  },
+  {
+   "text": "Now, the word lasagna shows up a lot on the web--",
+   "start": 50.96,
+   "duration": 2.54
+  },
+  {
+   "text": "pages about the history of lasagna,",
+   "start": 53.5,
+   "duration": 2.01
+  },
+  {
+   "text": "articles by scientists whose last name",
+   "start": 55.51,
+   "duration": 2.1
+  },
+  {
+   "text": "happened to be Lasagna, stuff other people",
+   "start": 57.61,
+   "duration": 2.91
+  },
+  {
+   "text": "might be looking for.",
+   "start": 60.52,
+   "duration": 1.3
+  },
+  {
+   "text": "But if you're hungry, randomly clicking through millions",
+   "start": 61.82,
+   "duration": 2.69
+  },
+  {
+   "text": "of links is no fun.",
+   "start": 64.51,
+   "duration": 1.95
+  },
+  {
+   "text": "This is where Google's ranking algorithms come into play.",
+   "start": 66.46,
+   "duration": 3.4
+  },
+  {
+   "text": "First, they try to understand what",
+   "start": 69.86,
+   "duration": 1.58
+  },
+  {
+   "text": "you're looking for so they can be helpful even if you don't",
+   "start": 71.44,
+   "duration": 2.91
+  },
+  {
+   "text": "know exactly the right words to use",
+   "start": 74.35,
+   "duration": 1.98
+  },
+  {
+   "text": "or if your spelling is a little off.",
+   "start": 76.33,
+   "duration": 1.98
+  },
+  {
+   "text": "Then they sift through millions of possible matches",
+   "start": 78.31,
+   "duration": 2.43
+  },
+  {
+   "text": "in the index and automatically assemble",
+   "start": 80.74,
+   "duration": 2.19
+  },
+  {
+   "text": "a page that tries to put the most relevant information",
+   "start": 82.93,
+   "duration": 2.67
+  },
+  {
+   "text": "up top for you to choose from.",
+   "start": 85.6,
+   "duration": 2.16
+  },
+  {
+   "text": "OK.",
+   "start": 87.76,
+   "duration": 0.57
+  },
+  {
+   "text": "Now we have some results.",
+   "start": 88.33,
+   "duration": 1.83
+  },
+  {
+   "text": "But how did the algorithms actually decide",
+   "start": 90.16,
+   "duration": 1.86
+  },
+  {
+   "text": "what made it onto the first page?",
+   "start": 92.02,
+   "duration": 2.093
+  },
+  {
+   "text": "There are hundreds of factors that",
+   "start": 94.113,
+   "duration": 1.417
+  },
+  {
+   "text": "go into ranking search results.",
+   "start": 95.53,
+   "duration": 1.6
+  },
+  {
+   "text": "So let's talk about a few of them.",
+   "start": 97.13,
+   "duration": 2.22
+  },
+  {
+   "text": "You may already know that pages containing",
+   "start": 99.35,
+   "duration": 2.03
+  },
+  {
+   "text": "the words you search for are more",
+   "start": 101.38,
+   "duration": 1.68
+  },
+  {
+   "text": "likely to end up at the top.",
+   "start": 103.06,
+   "duration": 1.56
+  },
+  {
+   "text": "No surprise there.",
+   "start": 104.62,
+   "duration": 1.39
+  },
+  {
+   "text": "But the location of those words, like in the page's title,",
+   "start": 106.01,
+   "duration": 3.2
+  },
+  {
+   "text": "or in an image's caption, those are factors, too.",
+   "start": 109.21,
+   "duration": 3.28
+  },
+  {
+   "text": "There's a lot more to ranking than just words.",
+   "start": 112.49,
+   "duration": 2.6
+  },
+  {
+   "text": "Back when Google got started, we looked",
+   "start": 115.09,
+   "duration": 1.77
+  },
+  {
+   "text": "at how pages linked to each other",
+   "start": 116.86,
+   "duration": 1.68
+  },
+  {
+   "text": "to better understand what pages were about",
+   "start": 118.54,
+   "duration": 2.19
+  },
+  {
+   "text": "and how important and trustworthy they seemed.",
+   "start": 120.73,
+   "duration": 2.73
+  },
+  {
+   "text": "Today, linking is still an important factor.",
+   "start": 123.46,
+   "duration": 2.5
+  },
+  {
+   "text": "Another factor is location, where a search happens.",
+   "start": 125.96,
+   "duration": 3.5
+  },
+  {
+   "text": "Because, if you happen to be in Ormea, Italy,",
+   "start": 129.46,
+   "duration": 2.79
+  },
+  {
+   "text": "you might be looking for information",
+   "start": 132.25,
+   "duration": 1.5
+  },
+  {
+   "text": "about their annual lasagna festival.",
+   "start": 133.75,
+   "duration": 2.16
+  },
+  {
+   "text": "But if you're in Omaha, Nebraska, you probably aren't.",
+   "start": 135.91,
+   "duration": 4.2
+  },
+  {
+   "text": "When a web page was uploaded is an important factor, too.",
+   "start": 140.11,
+   "duration": 3.48
+  },
+  {
+   "text": "Pages published more recently often",
+   "start": 143.59,
+   "duration": 1.95
+  },
+  {
+   "text": "have more accurate information, especially",
+   "start": 145.54,
+   "duration": 2.28
+  },
+  {
+   "text": "in the case of a rapidly developing news story.",
+   "start": 147.82,
+   "duration": 2.91
+  },
+  {
+   "text": "Of course, not every site on the web is trying to be helpful.",
+   "start": 150.73,
+   "duration": 3.66
+  },
+  {
+   "text": "Just like with robocalls on your phone or spam in your email,",
+   "start": 154.39,
+   "duration": 3.3
+  },
+  {
+   "text": "there are a lot of sites that only exist to scam.",
+   "start": 157.69,
+   "duration": 2.82
+  },
+  {
+   "text": "And every day, scammers upload millions more of them.",
+   "start": 160.51,
+   "duration": 3.28
+  },
+  {
+   "text": "So just because InstantVirusDownload.net",
+   "start": 163.79,
+   "duration": 2.93
+  },
+  {
+   "text": "lists the words \"lasagna recipe\" 400 times,",
+   "start": 166.72,
+   "duration": 2.76
+  },
+  {
+   "text": "that doesn't mean it's going to help you make dinner.",
+   "start": 169.48,
+   "duration": 2.25
+  },
+  {
+   "text": "We spend a lot of time trying to stay one step ahead of tricks",
+   "start": 171.73,
+   "duration": 2.73
+  },
+  {
+   "text": "like these, making sure our algorithms can recognize scam",
+   "start": 174.46,
+   "duration": 2.817
+  },
+  {
+   "text": "sites and flag them before they make it to your search results",
+   "start": 177.277,
+   "duration": 2.583
+  },
+  {
+   "text": "page.",
+   "start": 179.86,
+   "duration": 1.24
+  },
+  {
+   "text": "So let's review.",
+   "start": 181.1,
+   "duration": 1.37
+  },
+  {
+   "text": "Billions of times a day, whenever",
+   "start": 182.47,
+   "duration": 1.95
+  },
+  {
+   "text": "someone searches for lasagna, or resume writing tips,",
+   "start": 184.42,
+   "duration": 3.42
+  },
+  {
+   "text": "or how to swaddle a baby, or anything else,",
+   "start": 187.84,
+   "duration": 3.06
+  },
+  {
+   "text": "Google software locates all the potentially relevant results",
+   "start": 190.9,
+   "duration": 2.72
+  },
+  {
+   "text": "on the web, removes all the spam,",
+   "start": 193.62,
+   "duration": 1.87
+  },
+  {
+   "text": "and ranks them based on hundreds of factors, like keywords,",
+   "start": 195.49,
+   "duration": 3.27
+  },
+  {
+   "text": "links, location, and freshness.",
+   "start": 198.76,
+   "duration": 2.47
+  },
+  {
+   "text": "OK.",
+   "start": 201.23,
+   "duration": 0.5
+  },
+  {
+   "text": "Good time to take a breath.",
+   "start": 201.73,
+   "duration": 2.34
+  },
+  {
+   "text": "This last part is about how we make changes to Search.",
+   "start": 204.07,
+   "duration": 2.97
+  },
+  {
+   "text": "And it's important.",
+   "start": 207.04,
+   "duration": 1.41
+  },
+  {
+   "text": "Since 1998, when Google went online,",
+   "start": 208.45,
+   "duration": 2.64
+  },
+  {
+   "text": "people seem to have found our results pretty helpful.",
+   "start": 211.09,
+   "duration": 2.94
+  },
+  {
+   "text": "But the web is always changing and people are always",
+   "start": 214.03,
+   "duration": 2.55
+  },
+  {
+   "text": "searching for new things.",
+   "start": 216.58,
+   "duration": 1.81
+  },
+  {
+   "text": "In fact, one in every seven searches",
+   "start": 218.39,
+   "duration": 2.45
+  },
+  {
+   "text": "is for something that's never been typed into the search",
+   "start": 220.84,
+   "duration": 2.37
+  },
+  {
+   "text": "box before by anyone ever.",
+   "start": 223.21,
+   "duration": 3.12
+  },
+  {
+   "text": "So we're always working on updates to Search,",
+   "start": 226.33,
+   "duration": 3.06
+  },
+  {
+   "text": "thousands every year.",
+   "start": 229.39,
+   "duration": 1.84
+  },
+  {
+   "text": "Which brings up a big question.",
+   "start": 231.23,
+   "duration": 2.16
+  },
+  {
+   "text": "How do we decide whether a change",
+   "start": 233.39,
+   "duration": 1.4
+  },
+  {
+   "text": "is making Search more helpful?",
+   "start": 234.79,
+   "duration": 1.92
+  },
+  {
+   "text": "Well, one of the ways we evaluate",
+   "start": 236.71,
+   "duration": 1.95
+  },
+  {
+   "text": "potential updates to Search is by asking people like you.",
+   "start": 238.66,
+   "duration": 3.23
+  },
+  {
+   "text": "Every day, thousands of Search quality raters",
+   "start": 241.89,
+   "duration": 2.29
+  },
+  {
+   "text": "look at samples of Search results side by side,",
+   "start": 244.18,
+   "duration": 2.79
+  },
+  {
+   "text": "then give feedback about the relevance and reliability",
+   "start": 246.97,
+   "duration": 2.73
+  },
+  {
+   "text": "of the information.",
+   "start": 249.7,
+   "duration": 1.8
+  },
+  {
+   "text": "To make sure those evaluations are consistent,",
+   "start": 251.5,
+   "duration": 2.46
+  },
+  {
+   "text": "the raters follow a list of Search quality evaluator",
+   "start": 253.96,
+   "duration": 2.7
+  },
+  {
+   "text": "guidelines.",
+   "start": 256.66,
+   "duration": 1.119
+  },
+  {
+   "text": "Think of them as our publicly available guide to what",
+   "start": 257.779,
+   "duration": 2.511
+  },
+  {
+   "text": "makes a good result good.",
+   "start": 260.29,
+   "duration": 1.87
+  },
+  {
+   "text": "Oh, and one last thing to remember.",
+   "start": 262.16,
+   "duration": 2.15
+  },
+  {
+   "text": "We use responses from raters to evaluate changes.",
+   "start": 264.31,
+   "duration": 3.16
+  },
+  {
+   "text": "But they don't directly impact how Search results are ranked.",
+   "start": 267.47,
+   "duration": 3.62
+  },
+  {
+   "text": "So there you have it.",
+   "start": 271.09,
+   "duration": 1.47
+  },
+  {
+   "text": "Every time you click Search, our algorithms",
+   "start": 272.56,
+   "duration": 2.19
+  },
+  {
+   "text": "are analyzing the meaning of the words in your search,",
+   "start": 274.75,
+   "duration": 2.64
+  },
+  {
+   "text": "matching them to the content on the web,",
+   "start": 277.39,
+   "duration": 1.92
+  },
+  {
+   "text": "understanding what content is most",
+   "start": 279.31,
+   "duration": 1.98
+  },
+  {
+   "text": "likely to be helpful and reliable,",
+   "start": 281.29,
+   "duration": 1.833
+  },
+  {
+   "text": "and then automatically putting it all together",
+   "start": 283.123,
+   "duration": 1.917
+  },
+  {
+   "text": "in a neatly organized page designed to get you the info",
+   "start": 285.04,
+   "duration": 2.91
+  },
+  {
+   "text": "you need.",
+   "start": 287.95,
+   "duration": 0.7
+  },
+  {
+   "text": "All in, oh, 0.81 seconds?",
+   "start": 288.65,
+   "duration": 2.24
+  },
+  {
+   "text": "Wow.",
+   "start": 290.89,
+   "duration": 0.602
+  },
+  {
+   "text": "Anyone else ready for dinner?",
+   "start": 291.492,
+   "duration": 1.208
+  },
+  {
+   "text": "Interested in learning more?",
+   "start": 295.54,
+   "duration": 1.35
+  },
+  {
+   "text": "We've got a whole website dedicated to how Search works.",
+   "start": 296.89,
+   "duration": 2.85
+  },
+  {
+   "text": "Just click right here.",
+   "start": 299.74,
+   "duration": 1.98
+  },
+  {
+   "text": "Want to read the Search Quality Rater Guidelines for yourself?",
+   "start": 301.72,
+   "duration": 2.76
+  },
+  {
+   "text": "Click right here.",
+   "start": 304.48,
+   "duration": 1.97
+  }
+ ]
+}

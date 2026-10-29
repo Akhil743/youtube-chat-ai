@@ -1,0 +1,533 @@
+{
+ "video_id": "rhIRD5YVNbs",
+ "title": "How a lead-acid battery works",
+ "channel": "engineerguy",
+ "url": "https://www.youtube.com/watch?v=rhIRD5YVNbs",
+ "duration_seconds": 296,
+ "license": "Creative Commons Attribution license (reuse allowed), as shown on the YouTube watch page",
+ "license_verified_on": "2026-10-29",
+ "captions": "Manually created English captions published on YouTube",
+ "language": "en",
+ "segments": [
+  {
+   "text": "How a lead acid battery works EngineerGuy Series #4",
+   "start": 2.0,
+   "duration": 8.0
+  },
+  {
+   "text": "The increasing amount of technology we rely on in",
+   "start": 10.0,
+   "duration": 3.5
+  },
+  {
+   "text": "everyday life makes portable energy sources essential",
+   "start": 13.5,
+   "duration": 2.5
+  },
+  {
+   "text": "to our world today.",
+   "start": 16.0,
+   "duration": 1.0
+  },
+  {
+   "text": "We can power our cellphones and laptops with",
+   "start": 17.0,
+   "duration": 2.5
+  },
+  {
+   "text": "lithium ion batteries, run flashlights from alkaline ones,",
+   "start": 19.5,
+   "duration": 3.5
+  },
+  {
+   "text": "and many of our watches depend on batteries constructed with silver oxide.",
+   "start": 23.0,
+   "duration": 4.0
+  },
+  {
+   "text": "This one, though, may be the most important of them all.",
+   "start": 27.0,
+   "duration": 3.0
+  },
+  {
+   "text": "Now I know it seems a clunky, old-fashioned thing",
+   "start": 30.0,
+   "duration": 2.5
+  },
+  {
+   "text": "it was invented in the 19th century",
+   "start": 32.5,
+   "duration": 1.5
+  },
+  {
+   "text": "but it still makes our world move by starting our",
+   "start": 34.0,
+   "duration": 2.5
+  },
+  {
+   "text": "cars, motorcycles, and trucks.",
+   "start": 36.5,
+   "duration": 2.25
+  },
+  {
+   "text": "No wonder it’s the best selling battery.",
+   "start": 38.75,
+   "duration": 2.25
+  },
+  {
+   "text": "If you understand how this battery operates",
+   "start": 41.0,
+   "duration": 2.5
+  },
+  {
+   "text": "you can grasp the principles underlying any of the newer ones",
+   "start": 43.5,
+   "duration": 2.5
+  },
+  {
+   "text": "and even see why no single type of battery can be used in all applications.",
+   "start": 46.0,
+   "duration": 5.0
+  },
+  {
+   "text": "Let’s take a look inside.",
+   "start": 51.0,
+   "duration": 1.0
+  },
+  {
+   "text": "The first thing to note about this motorcycle battery is that it's heavy",
+   "start": 53.6,
+   "duration": 2.9
+  },
+  {
+   "text": "That’s because it’s tightly packed with lead and lead oxide sheets",
+   "start": 56.5,
+   "duration": 3.5
+  },
+  {
+   "text": "both of which are very dense.",
+   "start": 60.0,
+   "duration": 2.0
+  },
+  {
+   "text": "This is a cell from an identical battery",
+   "start": 62.0,
+   "duration": 3.0
+  },
+  {
+   "text": "and you can see the lead and underneath this the lead oxide.",
+   "start": 65.0,
+   "duration": 4.0
+  },
+  {
+   "text": "They alternate throughout the interior.",
+   "start": 69.0,
+   "duration": 2.0
+  },
+  {
+   "text": "So, let me show you how they store electricity using just two plates.",
+   "start": 71.0,
+   "duration": 4.0
+  },
+  {
+   "text": "So, I have here a lead plate and a lead oxide plate from the battery",
+   "start": 77.0,
+   "duration": 4.0
+  },
+  {
+   "text": "and the sulfuric acid.",
+   "start": 81.0,
+   "duration": 2.0
+  },
+  {
+   "text": "And now watch what happens when I connect the leads",
+   "start": 83.0,
+   "duration": 2.5
+  },
+  {
+   "text": "The LED lights up.",
+   "start": 86.5,
+   "duration": 2.25
+  },
+  {
+   "text": "A current flows from the lead oxide cathode to the lead anode.",
+   "start": 88.75,
+   "duration": 3.25
+  },
+  {
+   "text": "The lead gives up electrons, which the lead oxide accepts.",
+   "start": 92.0,
+   "duration": 3.0
+  },
+  {
+   "text": "This exchange turns both plates into solid lead sulfate.",
+   "start": 95.0,
+   "duration": 4.0
+  },
+  {
+   "text": "Now let me measure the voltage difference between the two leads.",
+   "start": 99.0,
+   "duration": 3.0
+  },
+  {
+   "text": "And you can see that it’s about two volts",
+   "start": 104.0,
+   "duration": 2.0
+  },
+  {
+   "text": "which means that to make this 12-volt battery",
+   "start": 106.0,
+   "duration": 4.75
+  },
+  {
+   "text": "six cells are linked in series to make up the 12 volts.",
+   "start": 110.75,
+   "duration": 2.25
+  },
+  {
+   "text": "So, that’s the basic electrochemical reaction",
+   "start": 113.0,
+   "duration": 2.75
+  },
+  {
+   "text": "now let’s look at how you engineer a battery.",
+   "start": 115.75,
+   "duration": 2.0
+  },
+  {
+   "text": "We want a battery to have a high density of either energy or power.",
+   "start": 117.75,
+   "duration": 3.25
+  },
+  {
+   "text": "That difference being that batteries with a high energy density",
+   "start": 121.0,
+   "duration": 2.75
+  },
+  {
+   "text": "can store large amounts of energy,",
+   "start": 123.75,
+   "duration": 2.25
+  },
+  {
+   "text": "and release it reliably over long periods of time,",
+   "start": 126.0,
+   "duration": 2.0
+  },
+  {
+   "text": "whereas batteries with a high power density release",
+   "start": 128.0,
+   "duration": 3.0
+  },
+  {
+   "text": "large amounts of energy quickly.",
+   "start": 131.0,
+   "duration": 2.0
+  },
+  {
+   "text": "This battery was designed with power in mind",
+   "start": 133.0,
+   "duration": 2.5
+  },
+  {
+   "text": "because we need a burst of nearly four hundred amps to start a motorcycle.",
+   "start": 135.5,
+   "duration": 3.5
+  },
+  {
+   "text": "To save space we need to pack the plates in here tightly",
+   "start": 139.0,
+   "duration": 2.75
+  },
+  {
+   "text": "but in order to ensure that the electron transfer",
+   "start": 141.75,
+   "duration": 2.25
+  },
+  {
+   "text": "takes place through the terminals",
+   "start": 144.0,
+   "duration": 1.75
+  },
+  {
+   "text": "the plates are mechanically separated by these permeable layers.",
+   "start": 145.75,
+   "duration": 4.25
+  },
+  {
+   "text": "Now, let me show you two plates from a discharged battery",
+   "start": 150.0,
+   "duration": 3.0
+  },
+  {
+   "text": "so you can see the effect of a deep discharge of a battery.",
+   "start": 153.0,
+   "duration": 3.0
+  },
+  {
+   "text": "If we look at these two plates we can see",
+   "start": 157.0,
+   "duration": 2.0
+  },
+  {
+   "text": "the effect of a long term discharge.",
+   "start": 159.0,
+   "duration": 2.0
+  },
+  {
+   "text": "This light coating here is lead sulfate.",
+   "start": 161.0,
+   "duration": 2.75
+  },
+  {
+   "text": "That explains why if you run a car battery to zero charge",
+   "start": 163.75,
+   "duration": 2.25
+  },
+  {
+   "text": "a few times you’re likely to kill it.",
+   "start": 166.0,
+   "duration": 2.0
+  },
+  {
+   "text": "As the battery discharges, lead sulfate cakes the space between the plates.",
+   "start": 168.0,
+   "duration": 4.0
+  },
+  {
+   "text": "If too much builds up, you’ll never be able to recharge the battery.",
+   "start": 172.0,
+   "duration": 4.0
+  },
+  {
+   "text": "This highlights how every different application",
+   "start": 176.0,
+   "duration": 2.0
+  },
+  {
+   "text": "needs a different type of battery.",
+   "start": 178.0,
+   "duration": 1.0
+  },
+  {
+   "text": "You see with most engineered objects",
+   "start": 179.0,
+   "duration": 2.0
+  },
+  {
+   "text": "there are going to be trade-offs",
+   "start": 181.0,
+   "duration": 1.0
+  },
+  {
+   "text": "giving away some characteristic you want",
+   "start": 182.0,
+   "duration": 2.0
+  },
+  {
+   "text": "to gain others that you must have.",
+   "start": 184.0,
+   "duration": 2.0
+  },
+  {
+   "text": "Indeed, the toughest part of engineering often ends up",
+   "start": 186.0,
+   "duration": 3.0
+  },
+  {
+   "text": "being balancing the trade-offs in a design.",
+   "start": 189.0,
+   "duration": 2.0
+  },
+  {
+   "text": "For example, a car battery does a great job starting a vehicle",
+   "start": 191.0,
+   "duration": 3.0
+  },
+  {
+   "text": "but not running one, like an electric car.",
+   "start": 194.0,
+   "duration": 2.0
+  },
+  {
+   "text": "Nor is it a good candidate to store energy",
+   "start": 196.0,
+   "duration": 2.5
+  },
+  {
+   "text": "from solar panels in a house.",
+   "start": 198.5,
+   "duration": 1.5
+  },
+  {
+   "text": "There we harvest energy from the sun",
+   "start": 200.0,
+   "duration": 2.0
+  },
+  {
+   "text": "charge up the batteries",
+   "start": 202.0,
+   "duration": 1.0
+  },
+  {
+   "text": "and then use the stored energy",
+   "start": 203.0,
+   "duration": 2.0
+  },
+  {
+   "text": "in a variety of ways until the batteries die and",
+   "start": 205.0,
+   "duration": 2.0
+  },
+  {
+   "text": "then recharge them with the sun’s energy.",
+   "start": 207.0,
+   "duration": 3.0
+  },
+  {
+   "text": "For this use you would use what is called a deep cycle battery.",
+   "start": 210.0,
+   "duration": 3.0
+  },
+  {
+   "text": "As the name implies this battery's capacity can be largely used",
+   "start": 213.0,
+   "duration": 3.0
+  },
+  {
+   "text": "and then recharged easily.",
+   "start": 216.0,
+   "duration": 2.5
+  },
+  {
+   "text": "To convert an SLI battery",
+   "start": 218.5,
+   "duration": 1.5
+  },
+  {
+   "text": "like used to start a motorcycle or a car",
+   "start": 220.0,
+   "duration": 2.0
+  },
+  {
+   "text": "into a deep cycle battery we do three things.",
+   "start": 222.0,
+   "duration": 3.0
+  },
+  {
+   "text": "We use thicker electrodes to increase energy density",
+   "start": 225.0,
+   "duration": 3.0
+  },
+  {
+   "text": "space them further apart so lead sulfate debris can fall off of them",
+   "start": 228.0,
+   "duration": 3.75
+  },
+  {
+   "text": "and add room below where that debris can accumulate.",
+   "start": 231.75,
+   "duration": 3.0
+  },
+  {
+   "text": "The trade off is that it’s larger, heavier",
+   "start": 234.75,
+   "duration": 1.75
+  },
+  {
+   "text": "and gives off a lower current than a car battery.",
+   "start": 236.5,
+   "duration": 2.5
+  },
+  {
+   "text": "It would seem that we’d want to get rid of the lead-acid battery",
+   "start": 239.0,
+   "duration": 2.75
+  },
+  {
+   "text": "It poses a significant environmental risk if disposed of improperly.",
+   "start": 241.75,
+   "duration": 3.75
+  },
+  {
+   "text": "We still have the 19th century lead-acid battery",
+   "start": 245.5,
+   "duration": 2.5
+  },
+  {
+   "text": "because of what nature has handed us",
+   "start": 248.0,
+   "duration": 1.75
+  },
+  {
+   "text": "plentiful electrode materials, lead and lead oxide",
+   "start": 249.75,
+   "duration": 3.25
+  },
+  {
+   "text": "both very high in conductivity.",
+   "start": 253.0,
+   "duration": 2.0
+  },
+  {
+   "text": "Once we arrange these materials correctly we have a",
+   "start": 255.0,
+   "duration": 2.0
+  },
+  {
+   "text": "cheap battery with a high power density.",
+   "start": 257.0,
+   "duration": 2.75
+  },
+  {
+   "text": "No other materials found in nature meet these criteria so well",
+   "start": 259.75,
+   "duration": 3.25
+  },
+  {
+   "text": "which means that with current technology it is extremely difficult",
+   "start": 263.0,
+   "duration": 4.0
+  },
+  {
+   "text": "to overcome this barrier.",
+   "start": 267.0,
+   "duration": 1.5
+  },
+  {
+   "text": "That’s why 19th century technology is still",
+   "start": 268.5,
+   "duration": 2.5
+  },
+  {
+   "text": "the go to for starting our cars.",
+   "start": 271.0,
+   "duration": 2.0
+  },
+  {
+   "text": "I’m Bill Hammack, the Engineer guy.",
+   "start": 273.0,
+   "duration": 2.0
+  },
+  {
+   "text": "This video is based on a chapter in the book",
+   "start": 275.0,
+   "duration": 2.0
+  },
+  {
+   "text": "Eight Amazing Engineering Stories.",
+   "start": 277.0,
+   "duration": 2.0
+  },
+  {
+   "text": "The chapter features more information about this subject.",
+   "start": 279.0,
+   "duration": 3.0
+  },
+  {
+   "text": "Learn more about the book at the address below.",
+   "start": 282.0,
+   "duration": 3.0
+  }
+ ]
+}
